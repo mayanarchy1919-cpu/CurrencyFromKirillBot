@@ -1,0 +1,9 @@
+#TelegramBot
+pyTelegramBotAPI==4.32.0
+
+#Parsing
+requests==2.32.5
+
+#EnvironmentVariables
+python-dotenv==1.2.2
+
