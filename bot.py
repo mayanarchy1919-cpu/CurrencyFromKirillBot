@@ -34,6 +34,8 @@ def convert(message: telebot.types.Message):
         if base == quote:
             raise ConvertionException(f"Конвертируемые валюты должны отличаться.")
         text = CurrencyConvertor.get_price(base, quote, amount)
+    except ConvertionException as e:
+        bot.reply_to(message, f"Упс... Ошибка пользователя. \n{e}")
     except Exception as e:
         bot.reply_to(message, f"Возникла ошибка на сервере. \n{e}")
     else:
