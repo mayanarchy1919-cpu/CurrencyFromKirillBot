@@ -6,8 +6,9 @@ load_dotenv()
 class Config:
     BOT_TOKEN = os.getenv('BOT_TOKEN')
 
-
-
+    currency = {'Доллар': 'USD',
+                'Евро': 'EUR',
+                'Рубль': 'RUB'}
 
 
 config = Config()
